@@ -22,15 +22,11 @@ declare -A URLS
 URLS=(
   ["duckduckgo"]="https://www.duckduckgo.com/?q="
   ["archwiki"]="https://wiki.archlinux.org/index.php?search="
-  ["enwikipedia"]="https://en.wikipedia.org/w/index.php?search="
-  ["jpwikipedia"]="https://jp.wikipedia.org/w/index.php?search="
   ["jlearn"]="https://www.jlearn.net/search/"
-  ["stackoverflow"]="http://stackoverflow.com/search?q="
   ["github"]="https://github.com/search?q="
   ["osu"]="https://osu.ppy.sh/beatmapsets?q="
   ["youtube"]="https://www.youtube.com/results?search_query="
-  ["google"]="https://www.google.com/search?q="
-  ["gt spanish"]="https://translate.google.com/?au&sl=es&tl=en&op=translate&text="
+  ["reverso"]="https://context.reverso.net/translation/english-japanese/"
 )
 
 # List for rofi
@@ -50,7 +46,7 @@ main() {
 
     if [[ -n "$query" ]]; then
       url=${URLS[$platform]}$query
-      chromium "$url"
+      qutebrowser "$url"
       # xdg-open "$url"
     else
       exit

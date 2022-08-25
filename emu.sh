@@ -1,2 +1,2 @@
-cd "/home/laura/ubuntu20.04/"
+cd "/home/laura/xdg_home/ubuntu20.04/"
 ./qemu.sh
